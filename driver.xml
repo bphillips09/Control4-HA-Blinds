@@ -1,0 +1,156 @@
+<devicedata>
+	<copyright>BP</copyright>
+	<creator>BP</creator>
+	<manufacturer>BP</manufacturer>
+	<name>HA Blinds</name>
+	<model>HA Blinds</model>
+	<created>08/06/2024 12:00</created>
+	<modified>09/23/2024 12:00</modified>
+	<version>101</version>
+	<control>lua_gen</control>
+	<controlmethod>IP</controlmethod>
+	<driver>DriverWorks</driver>
+	<composer_categories>
+		<category>other</category>
+	</composer_categories>
+	<config>
+		<script jit="1" file="Control4-HA-Base/driver.lua"/>
+		<properties>
+			<property>
+				<name>Entity ID</name>
+				<type>STRING</type>
+				<readonly>false</readonly>
+				<default>cover.blinds_1</default>
+			</property>
+			<property>
+				<name>Driver Version</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Supports Open/Close</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Supports Stop</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Supports Level</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Supports Tilt</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Current Level</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Debug Mode</name>
+				<type>LIST</type>
+				<items>
+					<item>Off</item>
+					<item>On</item>
+				</items>
+				<default>Off</default>
+				<readonly>false</readonly>
+			</property>
+		</properties>
+		<actions>
+		</actions>
+		<commands/>
+	</config>
+	<proxy proxybindingid="5001" name="HA Blinds">blind</proxy>
+	<events/>
+	<capabilities>
+		<always_send_level>true</always_send_level>
+	</capabilities>
+	<connections>
+		<connection>
+			<id>999</id>
+			<facing>1</facing>
+			<type>1</type>
+			<connectionname>Device Link</connectionname>
+			<consumer>True</consumer>
+			<classes>
+				<class>
+					<classname>HA_DEVICE</classname>
+					<autobind>True</autobind>
+				</class>
+			</classes>
+		</connection>
+		<connection>
+			<id>5001</id>
+			<facing>6</facing>
+			<connectionname>Blind</connectionname>
+			<type>2</type>
+			<consumer>False</consumer>
+			<audiosource>False</audiosource>
+			<videosource>False</videosource>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>BLIND</classname>
+				</class>
+			</classes>
+		</connection>
+		<connection>
+			<id>200</id>
+			<facing>6</facing>
+			<connectionname>Top Button Link</connectionname>
+			<type>1</type>
+			<consumer>False</consumer>
+			<audiosource>False</audiosource>
+			<videosource>False</videosource>
+			<linelevel>True</linelevel>
+			<classes>
+				<class>
+					<classname>BUTTON_LINK</classname>
+				</class>
+			</classes>
+		</connection>
+		<connection>
+			<id>201</id>
+			<facing>6</facing>
+			<connectionname>Bottom Button Link</connectionname>
+			<type>1</type>
+			<consumer>False</consumer>
+			<audiosource>False</audiosource>
+			<videosource>False</videosource>
+			<linelevel>True</linelevel>
+			<classes>
+				<class>
+					<classname>BUTTON_LINK</classname>
+				</class>
+			</classes>
+		</connection>
+		<connection>
+			<id>202</id>
+			<facing>6</facing>
+			<connectionname>Toggle Button Link</connectionname>
+			<type>1</type>
+			<consumer>False</consumer>
+			<audiosource>False</audiosource>
+			<videosource>False</videosource>
+			<linelevel>True</linelevel>
+			<classes>
+				<class>
+					<classname>BUTTON_LINK</classname>
+				</class>
+			</classes>
+		</connection>
+	</connections>
+</devicedata>
